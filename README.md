@@ -1,8 +1,10 @@
 <h1 align="center"><b>Hi , I'm Iñaki Rosello </b></h1
 
 <ul><h2>About me</h2></ul>
-<li>Passionate about working on Machine Learning and Deep Learning projects.</li>
-<li>Currently working on a recommendation model project about steam games/coffee.</li>
+<li>Passionate about working on Machine Learning and Deep Learning end-to-end projects.</li>
+<li>Learning about RAGs</li>
+<li>Studying Computer Science</li>
+<li>Currently working on a recommendation model project with Movielens dataset</li>
 <br>
 <h2><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"><b> Skills</b></h2>
 
