@@ -1,7 +1,7 @@
 <h1 align="center"><b>Hi , I'm Iñaki Rosello </b></h1
 
 <ul><h2>About me</h2></ul>
-<li>Passionate about working on Machine Learning and Deep Learning end-to-end projects.</li>}
+<li>Passionate about working on Machine Learning and Deep Learning end-to-end projects.</li>
 <li>Studying Computer Science</li>
 <li>Currently learning Deep Learning</li>
 <br>
