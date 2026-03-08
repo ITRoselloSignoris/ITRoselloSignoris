@@ -2,7 +2,7 @@
   
 # Hi there! 👋 I'm Iñaki Rosello
 
-### Data Scientist | Computer Science Student | MLOps Practitioner
+### Data Scientist | Machine Learning Engineer | Computer Science Student
 
 *Transforming data into actionable insights through advanced analytics and machine learning*
 
@@ -107,6 +107,18 @@ Personal project exploring recommendation systems. Implements content-based + co
 </td>
 <td width="50%">
 
+### 🐎 [EquineLead — Horse Industry Lead Scoring](https://github.com/ITRoselloSignoris/S02-26-E45-Data_Science_EquineLead)
+![Status](https://img.shields.io/badge/Status-Production-success?style=flat-square)
+![NoCountry](https://img.shields.io/badge/NoCountry-Simulation-purple?style=flat-square)
+![F2](https://img.shields.io/badge/F2_Lead_Oro-0.51-brightgreen?style=flat-square)
+
+**Lead Scoring System for the Equestrian Market**
+
+System that automatically classifies visitors as Bronze, Silver, or Gold leads in the equestrian market ($50K+ horses). My role: design and implementation of the cascade Lead Scoring pipeline (4 XGBoost models) and interactive demo on Gradio/HuggingFace. F2 Gold Lead: ~0.51.
+
+**Stack:** XGBoost, Scikit-learn, MLflow, DagsHub, Gradio  
+**Skills:** Cascade Classifiers, Feature Engineering, Imbalanced Data, Explainable AI, Model Demo
+
 </td>
 </tr>
 </table>
@@ -121,7 +133,7 @@ Personal project exploring recommendation systems. Implements content-based + co
 
 ## 🛠️ Tech Stack
 
-<details open>
+<details>
 <summary><b>💻 Programming Languages</b></summary>
 <br>
 
@@ -132,7 +144,7 @@ Personal project exploring recommendation systems. Implements content-based + co
 
 </details>
 
-<details open>
+<details>
 <summary><b>📊 Data Science & Analytics</b></summary>
 <br>
 
@@ -148,7 +160,7 @@ Personal project exploring recommendation systems. Implements content-based + co
 
 </details>
 
-<details open>
+<details>
 <summary><b>🤖 Machine Learning</b></summary>
 <br>
 
@@ -163,7 +175,7 @@ Personal project exploring recommendation systems. Implements content-based + co
 
 </details>
 
-<details open>
+<details>
 <summary><b>🚀 MLOps & Production</b></summary>
 <br>
 
@@ -179,9 +191,12 @@ Personal project exploring recommendation systems. Implements content-based + co
 **Cloud & Infrastructure**  
 ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
 
+**Experiment Tracking & Registry**  
+![DagsHub](https://img.shields.io/badge/DagsHub-F05033?style=for-the-badge&logo=dagshub&logoColor=white)
+
 </details>
 
-<details open>
+<details>
 <summary><b>⚙️ Development Tools</b></summary>
 <br>
 
@@ -204,26 +219,13 @@ Personal project exploring recommendation systems. Implements content-based + co
 
 ---
 
-## 📊 GitHub Analytics
-
-<div align="center">
-  
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ITRoselloSignoris&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ITRoselloSignoris&layout=compact&theme=tokyonight&hide_border=true)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ITRoselloSignoris&theme=tokyonight&hide_border=true)
-
-</div>
-
----
-
 ## 🎓 Education & Certifications
 
 - 🎓 **Computer Science** - Universidad de Buenos Aires (Currently Studying)
 - 📜 **Data Science & MLOps Bootcamp** - EDVAI (Completed)
 - 🏆 **AlixPartners Case Competition 2025** - Participant
-- 💼 **NoCountry Simulation** - Data Science Team Member
+- 💼 **NoCountry Simulation (S02-26-E45)** - EquineLead: Lead Scoring & Recommendation System
+- 💼 **NoCountry Simulation** - Data Science Team Member (FinTech Churn)
 - 📚 **Continuous Learning:** Deep Learning, Advanced Analytics (EDA, Data Preparation), Production ML
 
 ---
@@ -310,6 +312,49 @@ Personal project exploring recommendation systems. Implements content-based + co
 </details>
 
 <details>
+<summary><b>🐎 EquineLead: Lead Scoring System - Technical Overview</b></summary>
+<br>
+
+**Project Type:** NoCountry Job Simulation — S02-26-E45 | Equestrian Market Intelligence  
+**My Role:** Lead Scoring Model Design & Implementation + Interactive Gradio Demo
+
+**Business Context:** Identifying a $50K horse buyer among thousands of casual visitors is the main bottleneck for equestrian sales teams. My contribution: the predictive pipeline that automatically classifies each user as Bronze, Silver, or Gold lead.
+
+**Cascade Architecture (4 Models)**
+
+```
+User Behavior
+     │
+     ▼
+[Step 1] Purchase intent? (Bronze vs Silver/Gold)
+     │
+     └──► [Step 2] High-value buyer? (Silver vs Gold)
+```
+
+4 models: `P1-horse`, `P2-horse`, `P1-prods`, `P2-prods`
+
+**Top Predictive Features:**
+| Feature | Signal |
+|---------|--------|
+| `max_horse_price_viewed` | ⭐⭐⭐ |
+| `horses_added_to_cart` | ⭐⭐⭐ |
+| `max_revisits_same_horse` | ⭐⭐⭐ |
+| `prestige_score` (job profile) | ⭐⭐ |
+
+**Results (XGBoost Tuned):** F2 Lead Oro ≈ **0.51**
+
+**My MLOps Contribution:**
+- **Experiment Tracking:** MLflow + DagsHub for model registry and metrics
+- **Explainability:** SHAP for feature importance analysis
+- **Demo:** Interactive Gradio app on HuggingFace Spaces
+
+**Live Demo:**
+- 🤗 [Model Demo (HuggingFace/Gradio)](https://huggingface.co/spaces/Itrs/EquineLead-Models)
+- 🧪 [Experiment Tracking (DagsHub/MLflow)](https://dagshub.com/aletbm/S02-26-E45-Data_Science_EquineLead)
+
+</details>
+
+<details>
 <summary><b>🎬 Movie Recommendation System - Implementation Details</b></summary>
 <br>
 
@@ -334,6 +379,7 @@ Personal project exploring recommendation systems. Implements content-based + co
 ## 💼 Project Highlights & Achievements
 
 **Data Science Projects:**
+- ✅ **EquineLead (NoCountry S02-26-E45)** - Cascade Lead Scoring with XGBoost, F2 Gold Lead ~0.51, interactive Gradio demo on HuggingFace
 - ✅ **Churn Prediction (FinTech)** - Achieved 0.76 Recall through SMOTE + Logistic Regression optimization
 - ✅ **Fraud Detection System** - Built production-ready fraud classifier with clustering + classification approach
 - ✅ **Recommendation Engine** - Implemented hybrid RecSys with FAISS/ANNOY for sub-second retrieval
@@ -350,43 +396,8 @@ Personal project exploring recommendation systems. Implements content-based + co
 **Bootcamp & Competitions:**
 - 🎯 EDVAI Data Science & MLOps Bootcamp 
 - 🏆 AlixPartners 2025 Case Competition - Demand Forecasting Hackaton Competition
+- 💼 NoCountry S02-26-E45 — EquineLead: Lead Intelligence System for the Equestrian Market
 - 💼 NoCountry Job Simulation - FinTech Churn Prediction Project
-
----
-
-## 📈 Data Science Workflow
-
-```python
-# My typical approach to DS projects
-
-def data_science_project(problem):
-    """
-    End-to-end data science methodology
-    """
-    # 1. Problem Understanding
-    business_context = understand_business_problem(problem)
-    success_metrics = define_kpis(business_context)
-    
-    # 2. Data Collection & Exploration
-    data = collect_data(sources)
-    insights = exploratory_analysis(data)
-    
-    # 3. Data Preparation
-    clean_data = handle_missing_values(data)
-    features = feature_engineering(clean_data)
-    X_train, X_test = split_and_scale(features)
-    
-    # 4. Modeling
-    models = train_multiple_models(X_train)
-    best_model = optimize_hyperparameters(models)
-    results = evaluate_model(best_model, X_test)
-    
-    # 5. Deployment & Monitoring
-    api = deploy_model(best_model)
-    monitor_performance(api)
-    
-    return production_ready_solution
-```
 
 ---
 
